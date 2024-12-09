@@ -15,7 +15,7 @@ function finduser() {
             return response.json();
         })
         .then(data => {
-            let image = data.avatar && data.avatar.link ? data.avatar.link : 'image/40a4592d0e7f4dc067ec0cdc24e038b9.png';
+            let image = data.avatar && data.avatar.link ? data.avatar.link : '40a4592d0e7f4dc067ec0cdc24e038b9.png';
             let clan = data.raw.clan ? data.raw.clan : 'None';
 
             const formattedDate = data.created_at.slice(0, 10);
@@ -45,7 +45,7 @@ function finduser() {
             if (data.badges && data.badges.includes('ACTIVE_DEVELOPER')) {
                 let BadgeBackground1 = document.createElement('div');
                 BadgeBackground1.className = 'BADGE';
-                BadgeBackground1.innerHTML = '<img class="badge-image" src="badge/active_dev_badge.gif">Active Dev';
+                BadgeBackground1.innerHTML = '<img class="badge-image" src="active_dev_badge.gif">Active Dev';
                 BadgeDiv.appendChild(BadgeBackground1);
             }
             
